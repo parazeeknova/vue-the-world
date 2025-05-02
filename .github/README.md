@@ -11,4 +11,4 @@ Visit : [vuetheworld.zephyyrr.in](https://vuetheworld.zephyyrr.in) | [vue-the-wo
 
 - **Log Visited Places:** Easily add records of the places you've been.
 - **Map Visualization:** View your travel history plotted on an interactive map.
-- **Many More** 
+- **Many More**
