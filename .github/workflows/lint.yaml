@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: build
     env:
-      COREPACK_ENABLE_AUTO_PIN=0
-      NODE_ENV=development
-      TURSO_DATABASE_URL= ${{secrets.TURSO_DATABASE_URL}}
-      TURSO_AUTH_TOKEN= ${{secrets.TURSO_AUTH_TOKEN}}
+      COREPACK_ENABLE_AUTO_PIN: 0
+      NODE_ENV: development
+      TURSO_DATABASE_URL: ${{secrets.TURSO_DATABASE_URL}}
+      TURSO_AUTH_TOKEN: ${{secrets.TURSO_AUTH_TOKEN}}
 
     steps:
       - uses: actions/checkout@v4
