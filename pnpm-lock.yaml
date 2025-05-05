@@ -35,6 +35,9 @@ importers:
       vue-router:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.13(typescript@5.8.3))
+      zod:
+        specifier: ^3.24.4
+        version: 3.24.4
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.12.0
@@ -5193,8 +5196,8 @@ packages:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
 
-  zod@3.24.3:
-    resolution: {integrity: sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==}
+  zod@3.24.4:
+    resolution: {integrity: sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -5949,7 +5952,7 @@ snapshots:
       unixify: 1.0.0
       urlpattern-polyfill: 8.0.2
       yargs: 17.7.2
-      zod: 3.24.3
+      zod: 3.24.4
     transitivePeerDependencies:
       - encoding
       - rollup
@@ -11047,6 +11050,6 @@ snapshots:
       compress-commons: 6.0.2
       readable-stream: 4.7.0
 
-  zod@3.24.3: {}
+  zod@3.24.4: {}
 
   zwitch@2.0.4: {}
