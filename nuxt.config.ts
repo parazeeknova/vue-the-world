@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/eslint", "@nuxt/icon"],
+  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxtjs/color-mode"],
   eslint: {
     checker: true,
     config: {
@@ -13,8 +13,13 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
-      // @ts-expect-error - Mismatch type error for tailwindcss plugin
       tailwindcss(),
     ],
+  },
+  colorMode: {
+    classSuffix: "",
+    preference: "system",
+    fallback: "dark",
+    dataValue: "theme",
   },
 });
