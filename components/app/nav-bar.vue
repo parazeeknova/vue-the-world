@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import AuthButton from "../auth-button.vue";
+</script>
+
 <template>
   <div class="fixed top-0 left-0 right-0 z-50 px-2 sm:px-4 md:px-8">
     <div class="bg-white dark:bg-neutral-800 rounded-b-[2rem] mx-auto max-w-[98%] sm:max-w-[95%] shadow-md transition-colors duration-300">
@@ -14,14 +18,11 @@
         <div class="navbar-end flex items-center gap-2 sm:gap-3">
           <AppThemeToggle />
 
-          <button class="btn btn-sm rounded-full bg-teal-600 hover:bg-teal-700 text-white border-none shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-            <Icon name="mdi:github" style="height: 18px; width: 18px;" />
-            Sign in with GitHub
-          </button>
+          <AuthButton />
 
           <div class="dropdown dropdown-end">
             <button tabindex="0" class="btn btn-sm btn-circle btn-ghost text-neutral-700 dark:text-neutral-200 transition-all duration-300">
-              <Icon name="tabler:align-left" style="height: 22px; width: 22px;" />
+              <Icon name="tabler:align-left" size="22" />
             </button>
             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-lg bg-white dark:bg-neutral-800 rounded-box w-48 sm:w-52 mt-2">
               <li>
