@@ -67,7 +67,9 @@ function handleVideoLoaded() {
 
         <div class="mt-6 sm:mt-10">
           <button class="btn btn-md sm:btn-lg rounded-full bg-white hover:bg-gray-100 text-neutral-800 border-none shadow-lg hover:shadow-xl transition-all duration-300 px-5 sm:px-8 font-medium text-sm sm:text-base">
-            Start Your Journey
+            <NuxtLink to="/dashboard">
+              Start Your Journey
+            </NuxtLink>
           </button>
         </div>
       </div>
