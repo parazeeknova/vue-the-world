@@ -3,7 +3,7 @@
 @plugin "daisyui" {
   themes:
     nord --default,
-    sunset --prefersdark;
+    dim --prefersdark;
 }
 
 .font-instrument-serif {

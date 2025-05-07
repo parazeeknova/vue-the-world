@@ -1,5 +1,7 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <ThemeProvider>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </ThemeProvider>
 </template>

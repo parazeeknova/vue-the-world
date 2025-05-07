@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
 
+const authStore = useAuthStore();
+
 const videoUrl = ref("https://cms.cockpit.zephyyrr.in/storage/uploads/2025/05/05/hero_uid_6818857eab911.mp4");
 const videoError = ref(false);
 const isVideoLoaded = ref(false);
@@ -56,20 +58,25 @@ function handleVideoLoaded() {
           <input
             type="text"
             placeholder="Search your next destination"
-            class="w-full px-4 sm:px-6 py-3 sm:py-4 pr-10 sm:pr-12 rounded-full text-neutral-700 dark:text-neutral-200 bg-white dark:bg-neutral-800 focus:outline-none shadow-lg transition-colors duration-300 text-sm sm:text-base"
+            class="w-full px-4 sm:px-6 py-3 sm:py-4 pr-10 sm:pr-12 rounded-full bg-base-100 text-base-content focus:outline-none shadow-lg transition-colors duration-300 text-sm sm:text-base"
           >
-          <button class="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 bg-teal-600 hover:bg-teal-700 p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <button class="absolute right-1 sm:right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary-focus p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 text-primary-content" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </button>
         </div>
 
         <div class="mt-6 sm:mt-10">
-          <button class="btn btn-md sm:btn-lg rounded-full bg-white hover:bg-gray-100 text-neutral-800 border-none shadow-lg hover:shadow-xl transition-all duration-300 px-5 sm:px-8 font-medium text-sm sm:text-base">
-            <NuxtLink to="/dashboard">
+          <button
+            class="btn btn-md sm:btn-lg rounded-full btn-neutral shadow-lg hover:shadow-xl transition-all duration-300 px-5 sm:px-8 font-medium text-sm sm:text-base"
+            @click="!authStore.user && authStore.signIn()"
+          >
+            <Icon name="tabler:map-pin-filled" size="18" class="mr-2" />
+            <NuxtLink v-if="authStore.user" to="/dashboard">
               Start Your Journey
             </NuxtLink>
+            <span v-else>Start Your Journey</span>
           </button>
         </div>
       </div>
