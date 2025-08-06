@@ -25,3 +25,4 @@ logs
 .env.production
 
 local.db*
+.eslintcache
